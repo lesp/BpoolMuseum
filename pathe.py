@@ -10,13 +10,15 @@ def music(audio):
     pygame.mixer.music.play(1)
 
 def player(video):
-    os.system("omxplayer -o local "+video)
+    os.system("omxplayer -o local "+str(video))
 
 def handle_touch(ch, evt):
     #print(ch, evt)
     if ch == 0:
         print("Film 1")
         music("seaside.mp3")
+        time.sleep(3)
+        player("Pioneering.mp4")
         time.sleep(0.2)
     elif ch == 2:
         print("Film 2")
